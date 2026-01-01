@@ -3,6 +3,7 @@ const totalNumbersInput = document.getElementById("total-numbers");
 const generateRandomNumberInput = document.getElementById(
     "generate-random-numbers",
 );
+const outputText = document.getElementById("output");
 
 generateRandomNumberInput.addEventListener("click", () => {
     const numBalls = numBallsInput.value;
@@ -17,4 +18,5 @@ generateRandomNumberInput.addEventListener("click", () => {
         selectedNumbers.push(selectedNumber);
         numbers.splice(selectedNumber, 1);
     }
+    outputText.innerText = numbers.join(", ");
 });
