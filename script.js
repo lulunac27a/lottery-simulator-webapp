@@ -3,7 +3,7 @@ const totalNumbersInput = document.getElementById("total-numbers"); //total numb
 const generateRandomNumberButton = document.getElementById(
     "generate-random-numbers",
 ); //generate random number button
-const outputText = document.getElementById("output");
+const outputText = document.getElementById("output"); //output text
 
 generateRandomNumberButton.addEventListener("click", () => {
     //when generate random number button is pressed
