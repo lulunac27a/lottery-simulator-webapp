@@ -1,4 +1,4 @@
-* {
-    font-family: system-ui;
-    line-height: 150%;
+* {/*global styles*/
+    font-family: system-ui;/*set default font to system-based font*/
+    line-height: 150%;/*set default line height to 150%*/
 }
