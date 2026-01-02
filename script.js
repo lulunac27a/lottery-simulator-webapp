@@ -4,6 +4,7 @@ const generateRandomNumberButton = document.getElementById(
     "generate-random-numbers",
 ); //generate random number button
 const outputText = document.getElementById("output"); //output text
+const generatedNumbersOutputText = document.getElementById("generated-numbers"); //generated numbers output text
 
 generateRandomNumberButton.addEventListener("click", () => {
     //when generate random number button is pressed
@@ -21,5 +22,6 @@ generateRandomNumberButton.addEventListener("click", () => {
         selectedNumbers.push(selectedNumber); //add selected number to list of selected numbers
         numbers.splice(selectedNumber, 1); //remove selected number to prevent duplicates
     }
-    outputText.innerText = selectedNumbers.join(", "); //update output text
+    outputText.innerText = `Generated ${numBalls} balls from ${selectedNumbers} balls`; //update output text
+    generatedNumbersOutputText.innerText = selectedNumbers.join(", "); //update generated numbers output text
 });
