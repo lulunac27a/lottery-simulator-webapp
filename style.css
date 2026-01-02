@@ -3,3 +3,7 @@
     font-family: system-ui; /*set default font to system-based font*/
     line-height: 150%; /*set default line height to 150%*/
 }
+output {
+    /*styles for output text content*/
+    line-height: 200%; /*set line height to 200%*/
+}
