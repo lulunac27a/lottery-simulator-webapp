@@ -8,8 +8,8 @@ const generatedNumbersOutputText = document.getElementById("generated-numbers");
 
 generateRandomNumberButton.addEventListener("click", () => {
     //when generate random number button is pressed
-    const numBalls = parseInt(numBallsInput.value); //get value of number of balls input
-    const totalNumbers = parseInt(totalNumbersInput.value); //get value of total numbers input
+    const numBalls = parseInt(numBallsInput.value, 10); //get value of number of balls input
+    const totalNumbers = parseInt(totalNumbersInput.value, 10); //get value of total numbers input
     const numbers = []; //numbers array
     for (let i = 0; i < totalNumbers; i++) {
         //repeat for numbers in total numbers
