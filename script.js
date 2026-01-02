@@ -21,5 +21,5 @@ generateRandomNumberButton.addEventListener("click", () => {
         selectedNumbers.push(selectedNumber); //add selected number to list of selected numbers
         numbers.splice(selectedNumber, 1); //remove selected number to prevent duplicates
     }
-    outputText.innerText = numbers.join(", "); //update output text
+    outputText.innerText = selectedNumbers.join(", "); //update output text
 });
