@@ -16,7 +16,7 @@ generateRandomNumberButton.addEventListener("click", () => {
     const nums = yourNumbersText.match(/\d+/g)?.map(Number) || []; //parse string as numeric list array
     const picks = nums.slice(0, numBalls);
     if (numBalls <= totalNumbers) {
-        //if number of balls is less than or equal to total number of balls
+        //if number of balls is less than or equal to total number of balls in order to avoid errors
         const numbers = []; //numbers array
         for (let i = 0; i < totalNumbers; i++) {
             //repeat for numbers in total numbers
