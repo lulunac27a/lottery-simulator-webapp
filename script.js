@@ -23,16 +23,24 @@ generateRandomNumberButton.addEventListener("click", () => {
             numbers.push(i + 1); //add numbers to numbers array
         }
         const selectedNumbers = []; //list of selected numbers
-        for (let i = 0; i < numBalls; i++) {
-            //repeat for each ball in number of balls
-            const selectedNumber = Math.floor(Math.random() * numbers.length); //get random number
-            selectedNumbers.push(selectedNumber); //add selected number to list of selected numbers
-            numbers.splice(selectedNumber, 1); //remove selected number to prevent duplicates
+        if (picks === numBalls) {
+            //check if number of picks is equal to number of balls
+            for (let i = 0; i < numBalls; i++) {
+                //repeat for each ball in number of balls
+                const selectedNumber = Math.floor(
+                    Math.random() * numbers.length,
+                ); //get random number
+                selectedNumbers.push(selectedNumber); //add selected number to list of selected numbers
+                numbers.splice(selectedNumber, 1); //remove selected number to prevent duplicates
+            }
+            const matches = selectedNumbers.filter((n) => picks.includes(n)); //find ball number matches
+            matchedNumbersOutputText.innerText = `${matches.length} (${matches.join(", ")}`; //update matched numbers output text
+        } else {
+            //if number of picks is not equal to number of balls
+            alert("Number of picks must be equal to number of balls"); //alert user that number of picks must be equal to number of balls
         }
-        const matches = selectedNumbers.filter((n) => picks.includes(n)); //find ball number matches
         outputText.innerText = `Generated ${numBalls} balls from ${totalNumbers} balls`; //update output text
         generatedNumbersOutputText.innerText = selectedNumbers.join(", "); //update generated numbers output text
-        matchedNumbersOutputText.innerText = `${matches.length} (${matches.join(", ")}`; //update matched numbers output text
     } else {
         //if number of balls is greater than total number of balls
         alert(
