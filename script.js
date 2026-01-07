@@ -1,4 +1,4 @@
-const numBallsInput = document.getElementById("num-balls"); //number of balls input
+const numBallsInput = document.getElementById("number-of-balls"); //number of balls input
 const totalNumbersInput = document.getElementById("total-numbers"); //total numbers input
 const yourNumbersInput = document.getElementById("your-numbers"); //your numbers input
 const generateRandomNumberButton = document.getElementById(
